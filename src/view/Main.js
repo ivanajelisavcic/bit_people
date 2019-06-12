@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const User = (props) => {
     return (
         <div className="singleUser">
@@ -15,13 +16,14 @@ const UserList = (props) => {
     return (
         <div>
             {props.users.map((user, i) => {
-                return <User userName={user.name} userEmail={user.email} dob={user.dob} key={i} />
+                return <User userName={user.name} userGender={user.gender} key={i} />
             })}
         </div>
     )
+
 }
 
 export {
-    User
+    User,
     UserList
 }

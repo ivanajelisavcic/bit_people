@@ -1,19 +1,37 @@
 import React from 'react';
 import { Header } from "./Header";
-import { User } from "./Main";
-import { UsersList } from "./Main"
-import { Footer } from "./Footer"
+import { Footer } from "./Footer";
+import { UserList } from './Main';
+import { fetchUsers } from '../services/userService';
 
 
-import './App.css';
+
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            users: []
+        }
+    }
+
+    componentDidMount() {
+        fetchUsers()
+            .then((data) => {
+                this.setState({ users: data });  //star state (users) se update-uje svaki put kad u novi state-u (data) stignu novi podaci, svaki put se trigeruje render()
+            })
+    }
+
+    render() {
+        return (
+            <div>
+                <Header title="React Users" />
+                <UserList users={this.state.users} />
+                <Footer />
+            </div>
+        );
+    }
+}
 
 
-const App = () => (
-    <div>
-        <Header title="React Users" />
-        <UserList users={users} />
-        <Footer />
-    </div>
-);
-
-
+export default App

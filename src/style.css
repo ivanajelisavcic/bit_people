@@ -1,0 +1,33 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(51, 49, 49);
+}
+
+.header {
+    background-color: rgb(233, 137, 126);
+    padding: 8px;
+}
+
+.root {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.singleUser {
+    background-color: ghostwhite;
+    border: 2px solid rgb(228, 227, 227);
+    border-radius: 3px;
+    font-family: 'Courier New', Courier, monospace;
+    padding-left: 20px;
+    margin: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.footer {
+    background-color: rgb(233, 137, 126);
+    text-align: center;
+    padding: 8px;
+}
