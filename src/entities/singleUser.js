@@ -1,9 +1,11 @@
 export class SingleUser {
-    constructor(gender, name, image, email) {
+    constructor(gender, name, image, email, lastName, dob) {
         this.gender = gender;
         this.name = name;
+        this.lastName = lastName;
         this.image = image;
         this.email = email;
+        this.dob = dob;
     }
 
     hideEmail() {
@@ -14,5 +16,11 @@ export class SingleUser {
         return emailUsername + "...@" + domain;
     }
 
+    formatDate() {
+        const date = new Date(this.dob);
+        return date.toLocaleDateString("en-GB").split("/").join(".")
+    }
+
 }
+
 

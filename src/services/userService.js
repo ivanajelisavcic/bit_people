@@ -11,16 +11,21 @@ export const fetchUsers = () => {
         .then(userData => adaptData(userData))
 
 
+
 }
 
 function adaptData(array) {
     return array.map(user => {
+        // console.log(user);
+
         const name = user.name.first;
         const gender = user.gender;
         const image = user.picture.medium;
         const email = user.email;
+        const lastName = user.name.last;
+        const dob = user.dob.date;
 
-        return new SingleUser(gender, name, image, email);
+        return new SingleUser(gender, name, image, email, lastName, dob);
     });
 
 }
