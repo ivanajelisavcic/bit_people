@@ -1,4 +1,5 @@
 import React from 'react';
+import "../App.css";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { UserList } from './Main';
@@ -18,7 +19,7 @@ class App extends React.Component {
     componentDidMount() {
         fetchUsers()
             .then((data) => {
-                this.setState({ users: data });  //star state (users) se update-uje svaki put kad u novi state-u (data) stignu novi podaci, svaki put se trigeruje render()
+                this.setState({ users: data });  //stari state (users) se update-uje svaki put kad u novi state-u (data) stignu novi podaci, svaki put se trigeruje render()
             })
     }
 

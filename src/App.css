@@ -8,7 +8,7 @@ body {
     padding: 8px;
 }
 
-.root {
+#root {
     width: 70%;
     margin: 0 auto;
 }
@@ -18,8 +18,11 @@ body {
     border: 2px solid rgb(228, 227, 227);
     border-radius: 3px;
     font-family: 'Courier New', Courier, monospace;
+    padding-top: 15px;
     padding-left: 20px;
     margin: 10px;
+    display: inline-block;
+    width: 30%;
 }
 
 h1 {

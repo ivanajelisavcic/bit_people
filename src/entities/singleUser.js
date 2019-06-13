@@ -1,8 +1,8 @@
 export class SingleUser {
-    constructor(gender, name, id) {
+    constructor(gender, name, image) {
         this.gender = gender;
         this.name = name;
-        this.id = id;
+        this.image = image;
     }
 }
 
