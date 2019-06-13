@@ -20,7 +20,7 @@ function adaptData(array) {
         const image = user.picture.medium;
         const email = user.email;
 
-        return new SingleUser(gender, name, image);
+        return new SingleUser(gender, name, image, email);
     });
 
 }

@@ -3,6 +3,10 @@ import React from 'react';
 
 const User = (props) => {
     console.log(props)
+
+
+
+
     return (
         <div className="singleUser">
             <img src={props.userImage} />
@@ -18,7 +22,7 @@ const UserList = (props) => {
     return (
         <div>
             {props.users.map((user, i) => {
-                return <User userName={user.name} userGender={user.gender} userImage={user.image} userEmail={user.email} key={i} />
+                return <User userName={user.name} userGender={user.gender} userImage={user.image} userEmail={user.hideEmail()} key={i} />
             })}
         </div>
     )
