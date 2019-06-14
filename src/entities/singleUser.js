@@ -21,6 +21,9 @@ export class SingleUser {
         return date.toLocaleDateString("en-GB").split("/").join(".")
     }
 
+    getFullName = () => {
+        const firstName = this.name
+        const surname = this.lastName
+        return `${firstName} ${surname}`
+    }
 }
-
-

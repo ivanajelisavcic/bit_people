@@ -4,6 +4,7 @@ import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { UserList } from './Main';
 import { fetchUsers } from '../services/userService';
+import { Grid } from './ui/Grid';
 
 
 
@@ -27,7 +28,8 @@ class App extends React.Component {
         return (
             <div>
                 <Header title="React Users" />
-                <UserList users={this.state.users} />
+                <Grid users={this.state.users} />
+                {/* <UserList users={this.state.users} changeLayout="Grid" /> */}
                 <Footer />
             </div>
         );

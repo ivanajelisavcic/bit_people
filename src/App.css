@@ -42,3 +42,8 @@ h1 {
     float: left;
     padding: 10px 20px 10px 10px;
 }
+
+.gridCards {
+    display: flex;
+    flex-direction: row;
+}

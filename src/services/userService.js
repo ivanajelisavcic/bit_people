@@ -20,7 +20,7 @@ function adaptData(array) {
 
         const name = user.name.first;
         const gender = user.gender;
-        const image = user.picture.medium;
+        const image = user.picture.large;
         const email = user.email;
         const lastName = user.name.last;
         const dob = user.dob.date;
