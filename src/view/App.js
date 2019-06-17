@@ -14,14 +14,25 @@ class App extends React.Component {
       users: []
     };
     this.onIconClick = this.onIconClick.bind(this);
+    this.reloadClick = this.reloadClick.bind(this)
   }
 
   onIconClick() {
     this.setState(prevState => {
-        // localStorage.setItem("state", !prevState.listView)
-      return { listView: !prevState.listView };
+            return { listView: !prevState.listView };
     });
   }
+
+  reloadClick() {
+    this.fetchUsers();
+   
+}
+
+reloadClick = () => {
+    this.setState({users:[]});
+    this.loadUsers();
+}
+
 
   componentDidMount() {
     fetchUsers().then(data => {
@@ -29,12 +40,20 @@ class App extends React.Component {
     });
   }
 
+  loadUsers() {
+  fetchUsers()
+        .then(users => this.setState({
+            users: users
+        }));
+}
+
   render() {
     return (
       <div>
         <Header
           onChangeLayout={this.onIconClick}
           listView={this.state.listView}
+          onReload={this.reloadClick}
           title="React Users"
         />
         <Grid users={this.state.users} />
