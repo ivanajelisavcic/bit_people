@@ -8,11 +8,13 @@ const List = ({ users }) => {
 
 
         return <ListItem
-            fullName={user.getFullName()}
-            email={user.hideEmail()}
-            dob={user.dob}
-            image={user.image}
+            user={user}
             key={index}
+        // fullName={user.getFullName()}
+        // email={user.hideEmail()}
+        // dob={user.dob}
+        // image={user.image}
+        // key={index}
         />
     });
 

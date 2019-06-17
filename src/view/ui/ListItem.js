@@ -1,15 +1,20 @@
 import React from 'react';
+import "../../../src/App.css"
 
-const ListItem = ({ fullName, email, dob, image }) => {
+const ListItem = (props) => {
+    console.log(props)
+
+    const { name, lastName, email, dob, image, isFemale } = props.user;
+    const cardColor = isFemale() ? "red" : ""
 
     return (
 
-        <div className="collection-item avatar">
-            <img src={image} />
-            <p>{fullName()}</p>
-            <p> {email}</p>
-            <p> {dob}</p>
-        </div>
+        <div className={`listItem collection-item avatar ${cardColor}`} >
+            <img src={image} className="listAvatar" />
+            <p className="fullName">{name} {lastName}</p>
+            <p><i class="fas fa-envelope"></i> {email}</p>
+            <p><i class="fas fa-birthday-cake"></i> {props.user.formatDate()}</p>
+        </div >
 
     );
 }

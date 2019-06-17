@@ -6,7 +6,7 @@ import axios from "axios"
 
 
 export const fetchUsers = () => {
-    return axios.get("https://randomuser.me/api/?results=12")
+    return axios.get("https://randomuser.me/api/?results=15")
         .then(response => response.data.results)
         .then(userData => adaptData(userData))
 
@@ -16,7 +16,7 @@ export const fetchUsers = () => {
 
 function adaptData(array) {
     return array.map(user => {
-        // console.log(user);
+        //console.log(user);
 
         const name = user.name.first;
         const gender = user.gender;

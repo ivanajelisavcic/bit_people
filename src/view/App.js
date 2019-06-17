@@ -2,9 +2,10 @@ import React from "react";
 import "../App.css";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
-import { UserList } from "./Main";
+// import { UserList } from "./Main";
 import { fetchUsers } from "../services/userService";
 import { Grid } from "./ui/Grid";
+import { List } from "./ui/List";
 
 class App extends React.Component {
   constructor(props) {
@@ -19,19 +20,19 @@ class App extends React.Component {
 
   onIconClick() {
     this.setState(prevState => {
-            return { listView: !prevState.listView };
+      return { listView: !prevState.listView };
     });
   }
 
   reloadClick() {
     this.fetchUsers();
-   
-}
 
-reloadClick = () => {
-    this.setState({users:[]});
+  }
+
+  reloadClick = () => {
+    this.setState({ users: [] });
     this.loadUsers();
-}
+  }
 
 
   componentDidMount() {
@@ -41,11 +42,13 @@ reloadClick = () => {
   }
 
   loadUsers() {
-  fetchUsers()
-        .then(users => this.setState({
-            users: users
-        }));
-}
+    fetchUsers()
+      .then(users => this.setState({
+        users: users
+      }));
+  }
+
+
 
   render() {
     return (
@@ -57,7 +60,10 @@ reloadClick = () => {
           title="React Users"
         />
         <Grid users={this.state.users} />
+        <List users={this.state.users} />
         {/* <UserList users={this.state.users} changeLayout="Grid" /> */}
+
+
         <Footer />
       </div>
     );

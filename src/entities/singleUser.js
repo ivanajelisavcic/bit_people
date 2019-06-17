@@ -19,6 +19,11 @@ export class SingleUser {
     formatDate() {
         const date = new Date(this.dob);
         return date.toLocaleDateString("en-GB").split("/").join(".")
+
+    }
+
+    isFemale = () => {
+        return this.gender === 'female'
     }
 
     getFullName = () => {
@@ -26,4 +31,5 @@ export class SingleUser {
         const surname = this.lastName
         return `${firstName} ${surname}`
     }
+
 }

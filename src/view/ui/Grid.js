@@ -6,11 +6,15 @@ const Grid = ({ users }) => {
     const gridJSX = users.map((user, index) => {
 
         return <GridItem
-            name={user.name}
-            email={user.hideEmail()}
-            dob={user.dob}
-            image={user.image}
+            user={user}
             key={index}
+
+        //     name={user.name}
+        //     email={user.hideEmail()}
+        //     dob={user.dob}
+        //     image={user.image}
+        //     key={index}
+
         />
     });
 
