@@ -4,6 +4,9 @@ import { Grid } from "../ui/Grid"
 import { List } from "../ui/List"
 import { Header } from "../Header";
 import { Footer } from "../Footer";
+import { Search } from "../Search";
+import { getFullName } from "../../entities/singleUser"
+
 
 
 class HomePage extends React.Component {
@@ -45,6 +48,17 @@ class HomePage extends React.Component {
             }));
     }
 
+    // onSearchBarInput = (e) => {
+    //     const inputValue = e.target.value;
+    //     const filteredUsers = this.state.users.filter((user) => {
+    //       return user.name.includes(inputValue.toLowerCase())
+    //     })
+    
+    //     this.setState({
+    //      filteredUsers
+    //     });
+    // }
+
     render() {
         return (
             <div>
@@ -54,6 +68,9 @@ class HomePage extends React.Component {
                     onReload={this.reloadClick}
                     title="React Users"
                 />
+                  {/* <Search onSearchBarInput={this.onSearchBarInput}/> */}
+                  
+                  
                 {
                     this.state.listView
                         ? <List users={this.state.users} />

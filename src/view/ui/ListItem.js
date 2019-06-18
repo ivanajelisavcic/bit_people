@@ -4,7 +4,7 @@ import "../../../src/App.css"
 const ListItem = (props) => {
     console.log(props)
 
-    const { name, lastName, email, dob, image, isFemale } = props.user;
+    const { name, lastName, email, image, isFemale } = props.user;
     const cardColor = isFemale() ? "red" : ""
 
     return (

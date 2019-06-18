@@ -44,6 +44,7 @@ h1 {
     border-radius: 50%;
     float: left;
     padding: 10px 20px 10px 10px;
+    
 }
 
 .listItem {
@@ -74,4 +75,36 @@ h1 {
 
 .fullName {
     margin-top: 15px;
+}
+
+.searchForm {
+    width: 1080px;
+
+}
+
+.searchLine {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin: 0 auto;
+    border-color: grey;
+    margin-bottom: 20px;
+    border-radius: 0%;
+}
+
+.searchIcon {
+    color: gray;
+}
+
+.gridIcon {
+color: white;
+
+}
+
+.listIcon {
+    color: white;
+}
+
+.reloadIcon {
+    color: white;
 }
